@@ -197,10 +197,11 @@ enum ItemQualities
     ITEM_QUALITY_RARE                  = 3,                 // BLUE
     ITEM_QUALITY_EPIC                  = 4,                 // PURPLE
     ITEM_QUALITY_LEGENDARY             = 5,                 // ORANGE
-    ITEM_QUALITY_ARTIFACT              = 6                  // LIGHT YELLOW
+    ITEM_QUALITY_ARTIFACT              = 6,                 // LIGHT YELLOW
+    ITEM_QUALITY_MYTHICAL              = 7                  // RED
 };
 
-#define MAX_ITEM_QUALITY                 7
+#define MAX_ITEM_QUALITY                 8
 
 uint32 const ItemQualityColors[MAX_ITEM_QUALITY] = {
     0xff9d9d9d,        // GREY
@@ -209,7 +210,8 @@ uint32 const ItemQualityColors[MAX_ITEM_QUALITY] = {
     0xff0070dd,        // BLUE
     0xffa335ee,        // PURPLE
     0xffff8000,        // ORANGE
-    0xffe6cc80         // LIGHT YELLOW
+    0xffe6cc80,        // LIGHT YELLOW
+    0xffff0000         // RED
 };
 
 enum SheathTypes
