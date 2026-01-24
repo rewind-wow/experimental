@@ -241,7 +241,7 @@ GuildAddStatus Guild::AddMember(ObjectGuid plGuid, uint32 plRank, uint32 petitio
         newmember.ZoneId = data->uiZoneId;
         newmember.accountId = data->uiAccount;
 
-        if (newmember.Level < 1 || newmember.Level >  ||
+        if (newmember.Level < 1 || newmember.Level > PLAYER_STRONG_MAX_LEVEL ||
           !((1 << (newmember.Class - 1)) & CLASSMASK_ALL_PLAYABLE))
         {
             sLog.Out(LOG_BASIC, LOG_LVL_ERROR, "%s has a broken data in field `characters` table, cannot add him to guild.", plGuid.GetString().c_str());
