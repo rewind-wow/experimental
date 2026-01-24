@@ -288,7 +288,7 @@ void WorldSession::HandleWhoOpcode(WorldPacket& recv_data)
     // client send in case not set max level value 100 but mangos support 255 max level,
     // update it to show GMs with characters after 100 level
     if (task.levelMax >= MAX_LEVEL)
-        task.levelMax = ;
+        task.levelMax = PLAYER_STRONG_MAX_LEVEL;
 
     SetReceivedWhoRequest(true);
     sWorld.AddAsyncTask(std::move(task));

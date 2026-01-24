@@ -883,6 +883,8 @@ enum ModelIds
     MODEL_GNOME_FEMALE  = 183,
     MODEL_TROLL_MALE    = 185,
     MODEL_TROLL_FEMALE  = 186,
+    MODEL_GOBLIN_MALE   = 831,
+    MODEL_GOBLIN_FEMALE = 832,
 };
 
 enum SpellProcEventTriggerCheck
