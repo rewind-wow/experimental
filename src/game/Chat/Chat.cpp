@@ -3856,6 +3856,7 @@ static RaceMaskName const raceMaskNames[] =
     { "tauren", (1 << (RACE_TAUREN - 1))  },
     { "gnome", (1 << (RACE_GNOME - 1))   },
     { "troll", (1 << (RACE_TROLL - 1))   },
+    { "goblin", (1 << (RACE_GOBLIN - 1)) },
 
     // masks
     { "alliance", RACEMASK_ALLIANCE },
