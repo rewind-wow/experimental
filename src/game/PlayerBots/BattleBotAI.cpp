@@ -101,8 +101,6 @@ uint32 BattleBotAI::GetMountSpellId() const
                 return BB_SPELL_MOUNT_60_TAUREN;
             case RACE_UNDEAD:
                 return BB_SPELL_MOUNT_60_UNDEAD;
-            case RACE_GOBLIN:
-                return BB_SPELL_MOUNT_60_GOBLIN;
         }
     }
     else if (me->GetLevel() >= 40)
@@ -130,8 +128,6 @@ uint32 BattleBotAI::GetMountSpellId() const
                 return BB_SPELL_MOUNT_40_TAUREN;
             case RACE_UNDEAD:
                 return BB_SPELL_MOUNT_40_UNDEAD;
-            case RACE_GOBLIN:
-                return BB_SPELL_MOUNT_40_GOBLIN;    
         }
     }
 
