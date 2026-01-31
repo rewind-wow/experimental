@@ -11671,8 +11671,6 @@ Races ObjectMgr::GetOppositeRace(Races origRace) const
             return RACE_TAUREN;
         case RACE_TROLL:
             return RACE_DWARF;
-        case RACE_GOBLIN:    
-            return RACE_GNOME;
         default:
             return RACE_GOBLIN;
     }
