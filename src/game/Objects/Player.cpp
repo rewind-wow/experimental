@@ -21329,8 +21329,6 @@ uint32 GetCapitalReputationForRace(uint8 race)
             return 68; // Undercity
         case RACE_TAUREN:
             return 81; // Thunder Bluff
-        case RACE_GOBLIN:    
-            return 169; // Steamwheedle Cartel
         default:
             return 0;
     }
