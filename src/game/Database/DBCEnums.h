@@ -27,7 +27,7 @@
 // Client expected level limitation, like as used in DBC item max levels for "until max player level"
 // use as default max player level, must be fit max level for used client
 // also see MAX_LEVEL and PLAYER_STRONG_MAX_LEVEL define
-#define PLAYER_MAX_LEVEL 60
+#define PLAYER_MAX_LEVEL 100
 
 // client supported max level for player/pets/etc. Avoid overflow or client stability affected.
 // also see GT_MAX_LEVEL define
