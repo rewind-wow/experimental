@@ -21,6 +21,7 @@
 #define _OBJECTMGR_H
 
 #include "Common.h"
+#include "Log.h"
 #include "Object.h"
 #include "CreatureDefines.h"
 #include "GameObject.h"
@@ -703,10 +704,34 @@ class ObjectMgr
 
         PlayerInfo const* GetPlayerInfo(uint32 race, uint32 class_) const
         {
-            if (race   >= MAX_RACES)   return nullptr;
-            if (class_ >= MAX_CLASSES) return nullptr;
+            if (race >= MAX_RACES)
+            {
+                if (sLog.HasLogLevelOrHigher(LOG_LVL_DEBUG))
+                    sLog.Out(LOG_BASIC, LOG_LVL_DEBUG,
+                        "ObjectMgr::GetPlayerInfo: nullptr (race out of range) race=%u class=%u (MAX_RACES=%u)",
+                        race, class_, uint32(MAX_RACES));
+                return nullptr;
+            }
+
+            if (class_ >= MAX_CLASSES)
+            {
+                if (sLog.HasLogLevelOrHigher(LOG_LVL_DEBUG))
+                    sLog.Out(LOG_BASIC, LOG_LVL_DEBUG,
+                        "ObjectMgr::GetPlayerInfo: nullptr (class out of range) race=%u class=%u (MAX_CLASSES=%u)",
+                        race, class_, uint32(MAX_CLASSES));
+                return nullptr;
+            }
+
             PlayerInfo const* info = &m_PlayerInfo[race][class_];
-            if (info->displayId_m==0 || info->displayId_f==0) return nullptr;
+
+            if (info->displayId_m == 0 || info->displayId_f == 0)
+            {
+                if (sLog.HasLogLevelOrHigher(LOG_LVL_DEBUG))
+                    sLog.Out(LOG_BASIC, LOG_LVL_DEBUG,
+                        "ObjectMgr::GetPlayerInfo: nullptr (missing display ids) race=%u class=%u displayId_m=%u displayId_f=%u",
+                        race, class_, uint32(info->displayId_m), uint32(info->displayId_f));
+                return nullptr;
+            }
             return info;
         }
         void GetPlayerLevelInfo(uint32 race, uint32 class_,uint32 level, PlayerLevelInfo* info) const;
