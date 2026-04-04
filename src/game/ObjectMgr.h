@@ -706,19 +706,11 @@ class ObjectMgr
         {
             if (race >= MAX_RACES)
             {
-                if (sLog.HasLogLevelOrHigher(LOG_LVL_DEBUG))
-                    sLog.Out(LOG_BASIC, LOG_LVL_DEBUG,
-                        "ObjectMgr::GetPlayerInfo: nullptr (race out of range) race=%u class=%u (MAX_RACES=%u)",
-                        race, class_, uint32(MAX_RACES));
                 return nullptr;
             }
 
             if (class_ >= MAX_CLASSES)
             {
-                if (sLog.HasLogLevelOrHigher(LOG_LVL_DEBUG))
-                    sLog.Out(LOG_BASIC, LOG_LVL_DEBUG,
-                        "ObjectMgr::GetPlayerInfo: nullptr (class out of range) race=%u class=%u (MAX_CLASSES=%u)",
-                        race, class_, uint32(MAX_CLASSES));
                 return nullptr;
             }
 
@@ -726,10 +718,6 @@ class ObjectMgr
 
             if (info->displayId_m == 0 || info->displayId_f == 0)
             {
-                if (sLog.HasLogLevelOrHigher(LOG_LVL_DEBUG))
-                    sLog.Out(LOG_BASIC, LOG_LVL_DEBUG,
-                        "ObjectMgr::GetPlayerInfo: nullptr (missing display ids) race=%u class=%u displayId_m=%u displayId_f=%u",
-                        race, class_, uint32(info->displayId_m), uint32(info->displayId_f));
                 return nullptr;
             }
             return info;
