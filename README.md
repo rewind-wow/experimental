@@ -5,6 +5,9 @@
 
 This project is an independent continuation of the Vmangos core based on Elysium / LightsHope codebases. It is maintained by the Rewind WoW team. This may or may not sync upstream with Vmangos. 
 
+### CI/CD 
+
+This branch is monitored by a remote script. Pushes to the development branch are automatically pulled into new builds for the Rewind experimental realm. 
 
 ### Deployment 
 
