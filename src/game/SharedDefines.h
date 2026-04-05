@@ -205,7 +205,7 @@ enum ItemQualities
     ITEM_QUALITY_EPIC                  = 4,                 // PURPLE
     ITEM_QUALITY_LEGENDARY             = 5,                 // ORANGE
     ITEM_QUALITY_ARTIFACT              = 6,                 // LIGHT YELLOW
-    ITEM_QUALITY_MYTHICAL              = 7                  // RED
+    ITEM_QUALITY_MYTHICAL              = 7                  // LIGHT BLUE
 };
 
 #define MAX_ITEM_QUALITY                 8
@@ -218,7 +218,7 @@ uint32 const ItemQualityColors[MAX_ITEM_QUALITY] = {
     0xffa335ee,        // PURPLE
     0xffff8000,        // ORANGE
     0xffe6cc80,        // LIGHT YELLOW
-    0xffff0000         // RED
+    0xff00ccff         // LIGHT BLUE
 };
 
 enum SheathTypes
