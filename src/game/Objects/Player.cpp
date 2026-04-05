@@ -21316,14 +21316,17 @@ uint32 GetCapitalReputationForRace(uint8 race)
     switch (race)
     {
         case RACE_HUMAN:
+        case RACE_DRAENEI:
             return 72; // Hurlevent
         case RACE_TROLL:
         case RACE_ORC:
+        case RACE_BLOODELF:
             return 76; // Orgrimmar
         case RACE_DWARF:
         case RACE_GNOME:
             return 47; // Ironforge
         case RACE_NIGHTELF:
+        case RACE_HIGHELF:
             return 69; // Darnassus
         case RACE_UNDEAD:
             return 68; // Undercity

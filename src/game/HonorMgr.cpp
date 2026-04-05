@@ -196,6 +196,9 @@ void HonorMaintenancer::SetCityRanks()
         {RACE_GNOME, {0,0}},
         {RACE_TROLL, {0,0}},
         {RACE_GOBLIN, {0,0}},
+        {RACE_BLOODELF, {0,0}},
+        {RACE_DRAENEI, {0,0}},
+        {RACE_HIGHELF, {0,0}}
     };
 
     for (uint8 i = 1; i < MAX_RACES; ++i)

@@ -11671,6 +11671,12 @@ Races ObjectMgr::GetOppositeRace(Races origRace) const
             return RACE_TAUREN;
         case RACE_TROLL:
             return RACE_DWARF;
+        case RACE_BLOODELF:
+            return RACE_DRAENEI;
+        case RACE_DRAENEI:
+            return RACE_BLOODELF;
+        case RACE_HIGHELF:
+            return RACE_HIGHELF;
         default:
             return RACE_GOBLIN;
     }
